@@ -8,18 +8,21 @@
     text-decoration: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background: #000;
     color: #fff;
 }
 
-.header{
+#header{
     width: 100%;
     height: 100vh;
     background-image: url(image/bg.png);
     background-size: cover;
     background-position: center;
-    position: relative;
 }
 
 .navbar{
@@ -52,7 +55,7 @@ a{
 
 .header-text span{
     font-size: 80px;
-    color: rgb(9, 158, 133);
+    color: #099e85;
 }
 
 .header-text h1{
@@ -61,4 +64,385 @@ a{
 
 .header-text h2{
     font-size: 30px;
+}
+
+#background{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-image: url(image/bgblack.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.background-col1{
+    flex-basis: 35%;
+}
+
+.background-col1 img{
+    height: 100vh;
+    
+}
+
+.background-col2{
+    flex-basis: 65%;
+}
+
+.background-col2 h2{
+    margin-top: 8%;
+    font-size: 40px;
+}
+
+.background-col2 p{
+    margin-top: 10px;
+}
+
+.tab-headers{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content:'';
+    width:0;
+    height: 3px;
+    background: #099e85;
+    position: absolute;
+    left:0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 80%;
+}
+
+.tab-content{
+    display: none;
+}
+
+.tab-content.active-tab{
+    display: block;
+}
+
+/* .tab-content{
+
+} */
+
+.timeline-area{
+    margin: 50px 45px;
+    width: 530px;
+    border-left: 2px solid #ccc;
+    padding: 0 20px 0 30px;
+}
+
+.education{
+    background-color: #fff;
+    padding: 15px 25px;
+    color: #000;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    line-height: 1.7;
+    position: relative;
+    height: 110px;
+    margin-bottom: 25px;
+}
+
+.education:before{
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000;
+    border: 3px solid #ddd;
+    position: absolute;
+    top: 10px;
+    left: -40px;
+}
+
+.education:after{
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent #ddd transparent transparent;
+    border-width: 8px;
+    position: absolute;
+    left: -17px;
+    top: 10px;
+}
+
+.skill{
+    list-style: none;
+    width: 600px;
+}
+
+.skill li{
+    margin: 20px 40px;
+    padding: 5px;
+}
+
+.bar{
+    background: #353b48;
+    display: block;
+    height: 20px;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar:hover{
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 0 10px rgba(0, 0, 0, 0.22);
+}
+
+.bar span{
+    height: 20px;
+    float: left;
+    background: rgb(9,158,133);
+    background: linear-gradient(135deg, rgba(9,158,133,1) 0%, rgba(22,118,124,1) 65%);
+}
+
+.python{
+    width: 90%;
+    animation: python 3s;
+}
+
+.html{
+    width: 85%;
+    animation: html 3s;
+}
+
+.css{
+    width: 75%;
+    animation: css 3s;
+}
+
+.js{
+    width: 50%;
+    animation: js 3s;
+}
+
+.java{
+    width: 80%;
+    animation: java 3s;
+}
+
+@keyframes python {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+
+@keyframes html {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 85%;
+    }
+}
+
+@keyframes css {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 75%;
+    }
+}
+
+@keyframes js {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 50%;
+    }
+}
+
+@keyframes java {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+
+.heading{
+    margin: 5% 5%;
+}
+
+#achievements{
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+    background-image: url(image/bgwhite.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#achievements .heading h2{
+    color: #000;
+}
+
+.achievement-container{
+    display: flex;
+}
+
+.achievement-1{
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    flex-basis: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.achievement-1 img{
+    width: 600px;
+    padding: 10px 10px;
+}
+
+.achievement-1 h3{
+    margin-top: 10px;
+    color: #000;
+}
+
+.achievement-2{
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    flex-basis: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.achievement-2 img{
+    width: 600px;
+    padding: 10px 10px;
+    
+}
+
+.achievement-2 h3{
+    margin-top: 10px;
+    color: #000;
+}
+
+#projects{
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+    background-image: url(image/bgblack.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.heading h2{
+    font-size: 40px;
+}
+
+.project-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 40px;
+    margin-top: 30px;
+    padding: 0 50px;
+}
+
+.project-item{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-item img{
+    object-fit: cover;
+    width: 100%;
+    height: 50vh;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #099e85);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 600;
+    margin-bottom: 20px; 
+}
+
+.layer a{
+    margin-top: 20px;
+    color: #099e85;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.project-item:hover img{
+    transform: scale(1.1);
+}
+
+.project-item:hover .layer{
+    height: 100%;
+}
+
+.btn{
+    display:block;
+    border: 1px solid #099e85;
+    padding: 14px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: #099e85;
+}
+
+.see-more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.see-more h3{
+    font-weight: 500;
+    margin: 0 15px;
 }
