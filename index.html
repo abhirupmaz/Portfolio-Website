@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/57beb676f9.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio website</title>
+</head>
+<body>
+    <div id="header">
+        <nav class="navbar">
+            <ul class="links">
+                <li><a href="#header">Introduce</a></li>
+                <li><a href="#background">Background</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contactme">Contact Me</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <h1>
+                <span>Hi! </span><br>
+                I'm Abhirup Mazumder.
+            </h1>
+            <h2>
+                {A Python Developer}
+            </h2>
+        </div>
+    </div>
+    <div id="background">
+        <div class="background-col1">
+            <img src="image/person1.png">
+        </div>
+        <div class="background-col2">
+            <h2>Background</h2>
+            <p>Certified Python Developer offering 1 year of valuable experience with
+                great analytical skills and problem-solving capability. Creativity is what
+                sets my work apart from the rest of the crowd. Winner of an
+                International Hackathon and Finalist of a National Hackathon.</p>
+            <div class="tab-headers">
+                <p class="tab-links active-link" onclick="opentab('ed-tab')">Education</p>
+                <p class="tab-links" onclick="opentab('sk-tab')">Skills</p>
+            </div>
+            <div class="tab-content active-tab" id="ed-tab">
+                <div class="timeline-area">
+                    <div class="education">
+                        <h4>St. Augustine's Day School, Barrackpore</h4>
+                        <h5>X, Science <br> 2005-2018</h5>
+                    </div>
+                    <div class="education">
+                        <h4>St. Augustine's Day School, Barrackpore</h4>
+                        <h5>XII, Science <br> 2018-2020</h5>
+                    </div>
+                    <div class="education">
+                        <h4>Institute of Engineering and Management, Kolkata</h4>
+                        <h5>B.Tech, Computer Science and Engineering <br> 2020-2024</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="sk-tab">
+                <div class="skill">
+                    <li><h3>Python</h3>
+                        <span class="bar"><span class="python"></span></span></li>
+                    <li><h3>HTML</h3>
+                        <span class="bar"><span class="html"></span></span></li>
+                    <li><h3>CSS</h3>
+                        <span class="bar"><span class="css"></span></span></li>
+                    <li><h3>Javascript</h3>
+                        <span class="bar"><span class="js"></span></span></li>
+                    <li><h3>Java</h3>
+                        <span class="bar"><span class="java"></span></span></li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="achievements">
+        <div class="heading">
+            <h2>Achievements</h2>
+        </div>
+        <div class="achievement-container">
+            <div class="achievement-1">
+                <img src="image/achievement-1.jpg">
+                <h3>Winner of Schenck Process Hackathon 2021</h3>
+            </div>
+            <div class="achievement-2">
+                <img src="image/achievement-2.png">
+                <h3>Certificate of Victory</h3>
+            </div>
+        </div>
+    </div>
+    <div id="projects">
+        <div class="heading">
+            <h2>Projects</h2>
+        </div>
+        <div class="project-list">
+            <div class="project-item">
+                <img src="image/project-1.jpg">
+                <div class="layer">
+                    <h3>Discord Bot for Data Science</h3>
+                    <p>A bot for discord communities to get latest papers thorough arXiv and other Reddit activities related to Data Science. </p>
+                    <a href="https://github.com/abhirupmaz/S4DS-Bot"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="image/project-2.jpg">
+                <div class="layer">
+                    <h3>Hangman Game using Python </h3>
+                    <p>A lightweight UI based on Python Turtle to build a Hangman Game. </p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="image/project-3.jpg">
+                <div class="layer">
+                    <h3>Portfolio Website</h3>
+                    <p>A sample template for a visually appealing portfolio website for users. </p>
+                    <a href="https://github.com/abhirupmaz/Portfolio-Website"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="see-more">
+            <h3>Looks interesting?</h3>
+            <a href="https://github.com/abhirupmaz" class="btn">See more</a>
+            <h3>of my projects!</h3>
+        </div>
+    </div>
+    <div id="contactme">
+
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-content");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab"); 
+        }
+
+    </script>
+</body>
+</html></html>
